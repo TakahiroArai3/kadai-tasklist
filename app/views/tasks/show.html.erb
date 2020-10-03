@@ -1,0 +1,10 @@
+<h1>id: <%= @task.id %> のタスク・ステイタス詳細ページ</h1>
+
+<p>タスク: <%= @task.content %></p>
+<p><%= @task.content %></p>
+<p>ステイタス: <%= @task.status %></p>
+<p><%= @task.status %></p>
+
+<%= link_to '一覧に戻る', tasks_path %>
+<%= link_to 'このIDの内容を編集する', edit_task_path(@task)%>
+<%= link_to 'このIDの内容を削除する', @task, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
